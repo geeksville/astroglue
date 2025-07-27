@@ -2,9 +2,11 @@
 
 I'm currently just playing with ideas and started from this Go devcontainer...
 
-## Setting up the development container
+## Developing
 
 ### GitHub Codespaces
+If you'd like to try developing on this project without needing to install **any** tools you can use a github codespace (on the web)
+
 Follow these steps to open this sample in a Codespace:
 1. Click the **Code** drop-down menu.
 2. Click on the **Codespaces** tab.
@@ -12,21 +14,12 @@ Follow these steps to open this sample in a Codespace:
 
 For more info, check out the [GitHub documentation](https://docs.github.com/en/free-pro-team@latest/github/developing-online-with-codespaces/creating-a-codespace#creating-a-codespace).
 
-### VS Code Dev Containers
-
-If you already have VS Code and Docker installed, you can click the badge above or [here](https://vscode.dev/redirect?url=vscode://ms-vscode-remote.remote-containers/cloneInVolume?url=https://github.com/microsoft/vscode-remote-try-go) to get started. Clicking these links will cause VS Code to automatically install the Dev Containers extension if needed, clone the source code into a container volume, and spin up a dev container for use.
-
-Follow these steps to open this sample in a container using the VS Code Dev Containers extension:
+### VS Code
+If you are using VSCode this project includes built in support for devcontainers.  So it should automatically install/use anything you need to build/run this while developing.
 
 1. If this is your first time using a development container, please ensure your system meets the pre-reqs (i.e. have Docker installed) in the [getting started steps](https://aka.ms/vscode-remote/containers/getting-started).
 
-2. To use this repository, you can either open the repository in an isolated Docker volume:
-
-    - Press <kbd>F1</kbd> and select the **Dev Containers: Try a Sample...** command.
-    - Choose the "Go" sample, wait for the container to start, and try things out!
-        > **Note:** Under the hood, this will use the **Dev Containers: Clone Repository in Container Volume...** command to clone the source code in a Docker volume instead of the local filesystem. [Volumes](https://docs.docker.com/storage/volumes/) are the preferred mechanism for persisting container data.
-
-   Or open a locally cloned copy of the code:
+2. Start developing:
 
    - Clone this repository to your local filesystem.
    - Press <kbd>F1</kbd> and select the **Dev Containers: Open Folder in Container...** command.
@@ -67,13 +60,6 @@ Some things to try:
    - Modify the `"onAutoForward"` attribute in your `portsAttributes` from `"notify"` to `"openBrowser"`.
    - Press <kbd>F1</kbd> and select the **Dev Containers: Rebuild Container** or **Codespaces: Rebuild Container** command so the modifications are picked up.
 
-5. **Install Node.js using a Dev Container Feature:**
-   - Press <kbd>F1</kbd> and select the **Dev Containers: Configure Container Features...** or **Codespaces: Configure Container Features...** command.
-   - Type "node" in the text box at the top.
-   - Check the check box next to "Node.js (via nvm) and yarn" (published by devcontainers) 
-   - Click OK
-   - Press <kbd>F1</kbd> and select the **Dev Containers: Rebuild Container** or **Codespaces: Rebuild Container** command so the modifications are picked up.
-
 6. **Refactoring - rename:**
     - Open `hello.go`, select method name `Hello` press <kbd>F1</kbd> and run the **Rename Symbol** command.
 7. **Refactoring - extract:**
@@ -93,21 +79,8 @@ Some things to try:
    - Open `hello.go` and go with cursor in to a struct, press <kbd>F1</kbd> and run the **Go: Add Tags To Struct Fields** command.
 
 
-## Contributing
-
-This project welcomes contributions and suggestions. Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.microsoft.com.
-
-When you submit a pull request, a CLA-bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., label, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 ## License
 
-Copyright © Microsoft Corporation All rights reserved.<br />
-Licensed under the MIT License. See LICENSE in the project root for license information.
+Some sort of open-source license TBD but probably will be GPL.  If you have opinions on this please let me know!
+
