@@ -1,0 +1,56 @@
+# .goreleaser.yml
+
+# config file version
+version: 2
+
+# Set the project name
+project_name: astroglue
+
+# Before hooks are run before the build
+before:
+  hooks:
+    - go mod tidy
+
+# Build configuration
+builds:
+  - id: astroglue
+    # The main entrypoint for your application
+    main: .
+    # The platforms you want to build for
+    goos:
+      - linux
+      - darwin
+      - windows
+    goarch:
+      - amd64
+      - arm64
+    # The binary name template
+    binary: '{{ .ProjectName }}_{{ .Os }}_{{ .Arch }}'
+
+# Archive configuration (for .zip and .tar.gz)
+archives:
+  - format: tar.gz
+    # Use a better name for the archive file
+    name_template: '{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}'
+
+# NFPM configuration for creating .deb and .rpm packages for Linux
+nfpms:
+  -
+    # Build packages for linux amd64 and arm64 builds
+    builds:
+      - astroglue
+    # The package formats you want to create
+    formats:
+      - deb
+      - rpm
+    # Some example metadata for your packages
+    vendor: "Your Name"
+    homepage: "https://github.com/geeksville/astroglue"
+    maintainer: "Kevin Hester <kevinh@geeksville.com>"
+    description: "Workflow tools for astrophotography"
+    license: "TBD"
+
+# Configuration for the GitHub Release itself
+release:
+  # This is the default setting, which publishes the release
+  draft: false

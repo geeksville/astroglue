@@ -1,0 +1,31 @@
+# .github/workflows/release.yml
+name: Release
+
+on:
+  # Triggers the workflow when a tag starting with 'v' is pushed
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  goreleaser:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # GoReleaser needs the full git history
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.24'
+
+      - name: Run GoReleaser
+        uses: goreleaser/goreleaser-action@v6
+        with:
+          version: "~> v2"
+          args: release --clean
+        env:
+          # The GITHUB_TOKEN is required to create a GitHub Release
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
