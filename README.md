@@ -15,7 +15,7 @@ Follow these steps to open this sample in a Codespace:
 For more info, check out the [GitHub documentation](https://docs.github.com/en/free-pro-team@latest/github/developing-online-with-codespaces/creating-a-codespace#creating-a-codespace).
 
 ### VS Code
-If you are using VSCode this project includes built in support for devcontainers.  So it should automatically install/use anything you need to build/run this while developing.
+If you are using VSCode this project includes built in support for devcontainers.  So it should automatically install/use anything you need to build/run this while developing (compilers, auto-formatting etc...).  Should be able to just "git clone", run the app and then see your changes applied instantly.
 
 1. If this is your first time using a development container, please ensure your system meets the pre-reqs (i.e. have Docker installed) in the [getting started steps](https://aka.ms/vscode-remote/containers/getting-started).
 
